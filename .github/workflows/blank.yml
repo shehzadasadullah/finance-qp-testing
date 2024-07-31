@@ -1,0 +1,24 @@
+name: Deploy HTML to Google Cloud Storage
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: ${{ secrets.GOOGLE_CREDENTIALS }}
+
+      - name: Upload to Google Cloud Storage
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: '.' # Assuming your HTML files are at the root of the repository
+          destination: 'financing-qp'
+          parent: false

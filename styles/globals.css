@@ -1,0 +1,451 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Plus Jakarta Sans";
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Navbar custom css */
+
+.navbar-wrapper {
+  background: #fff;
+  border-bottom: 1px solid #F2F4F7;
+}
+
+.navbar-links-wrapper {
+  border-radius: 100px;
+  border: 1px solid #F2F4F7;
+  background: #F9FAFB;
+  padding: 8px 16px;
+}
+
+.navbar-link-active {
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.navbar-link {
+  color: #344054;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.navbar-login-button {
+  padding: 8px 12px;
+  border-radius: 9999px;
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.navbar-sign-up-button {
+  padding: 8px 12px;
+  border-radius: 9999px;
+  border: 1px solid #FF007A;
+  background: #FF007A;
+  filter: drop-shadow(0px 0px 4px #FF007A);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* hero section css */
+
+.hs-wrapper-main {
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/images/hero-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hs-wrapper-2 {
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/images/hero-noise.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hs-wrapper-3 {
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/images/hero-icons.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hs-wrapper3-financing-div {
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(22px);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+}
+
+.hs-wrapper3-financing-heading {
+  font-family: "Plus Jakarta Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  background: linear-gradient(90deg, #F4E6FB 1.42%, #FBE6F4 97.33%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hs-wrapper3-financing-sub-heading {
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.hs-wrapper2-started-button {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid #FF007A;
+  background: #FF007A;
+  filter: drop-shadow(0px 0px 4px #FF007A);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.hs-wrapper2-images-div-wrapper {
+  padding: 8px;
+  border-radius: 16px;
+  border: 0.5px solid rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.10);
+  filter: drop-shadow(0px 0px 2px #FF007A);
+  backdrop-filter: blur(74px);
+}
+
+/* Trusted by text css */
+
+.tb-text {
+  color: #344054;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Transform your business */
+
+.tb-wrapper {
+  border-radius: 16px;
+  background: #0F0F0F;
+}
+
+.tb-div1-wrapper {
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/images/tb-gradient.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tb-div2-wrapper {
+  border-radius: 16px;
+  /* padding: 100px 16px; */
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/images/tb-icons.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tb-button-too-wrapper {
+  padding: 4px 16px 4px 8px;
+  border-radius: 100px;
+  border: 0.5px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.10);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+}
+
+.tb-main-heading {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.tb-sub-heading {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.tb-sign-up-button {
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background: #FFF;
+  filter: drop-shadow(0px 0px 4px #fff);
+  color: #FF007A;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* Industries list css */
+
+.il-services-wrapper {
+  padding: 4px 16px 4px 8px;
+  border-radius: 100px;
+  border: 0.5px solid #D0D5DD;
+  background: #F9FAFB;
+}
+
+.il-services-heading {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+}
+
+.il-view-all-button {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid #FF007A;
+  background: #FF007A;
+  filter: drop-shadow(0px 0px 4px #FF007A);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.il-industries-serve {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.il-industries-serve-sub {
+  color: #475467;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.li-slider-buttons {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 0.6px solid #D0D5DD;
+  background: #FFF;
+}
+
+.il-card-wrapper {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #F2F4F7;
+}
+
+.li-card-top-button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid #EAECF0;
+  background: #F2F4F7;
+  filter: drop-shadow(0px 0px 4px #F2F4F7);
+}
+
+.li-card-heading {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.li-card-subHeading {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.li-card-button-bottom {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #FFF;
+  filter: drop-shadow(0px 0px 4px #fff);
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* testimonials section css */
+
+.ts-card-wrapper {
+  padding: 20px 20px 24px 20px;
+  border-radius: 16px;
+  filter: drop-shadow(0px 0px 4px #FFF);
+  border: 1px solid #F2F4F7;
+}
+
+.ts-name {
+  color: #1D1D1F;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.ts-company {
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ts-review {
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.ts-read-full {
+  color: #FF27A0;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* why choose us css */
+
+.wc-card-wrapper {
+  filter: drop-shadow(0px 0px 4px #fff)
+}
+
+.wc-card-heading {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.wc-card-subHeading {
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.harvv-clip {
+  background: var(--Gradient, linear-gradient(345deg, #EC008C -2%, #FC6767 83.36%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
