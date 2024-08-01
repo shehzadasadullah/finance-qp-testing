@@ -18,6 +18,8 @@ import Testimonials from "@/components/testimonials/Testimonials";
 import WhyChooseUs from "@/components/why-choose-us/WhyChooseUs";
 import TransformBusiness from "@/components/transform-business/TransformBusiness";
 import WhyHarvv from "@/components/why-harvv/WhyHarvv";
+import ContactUs from "@/components/contact-us/ContactUs";
+import Footer from "@/components/footer/Footer";
 
 const navigation = [
   { name: "Home", href: "#", current: true },
@@ -35,7 +37,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>HARVV - Home</title>
+        <title>Harvv Financing</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -232,6 +234,20 @@ export default function Home() {
             <WhyChooseUs></WhyChooseUs>
             <TransformBusiness></TransformBusiness>
             <WhyHarvv></WhyHarvv>
+          </div>
+        </div>
+
+        {/* Contact Us Section */}
+
+        <div className="w-full px-2 lg:px-4 pb-2 lg:pb-4">
+          <ContactUs></ContactUs>
+        </div>
+
+        {/* Footer Section */}
+
+        <div className="w-full px-2 lg:px-4 pb-2 lg:pb-4">
+          <div className="w-full bg-[#0C111D] rounded-[24px]">
+            <Footer></Footer>
           </div>
         </div>
       </div>

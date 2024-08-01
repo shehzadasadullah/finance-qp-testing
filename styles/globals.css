@@ -449,3 +449,200 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Contact Us CSS */
+
+.cu-details-wrapper {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #EC008C;
+}
+
+.cu-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  padding: 14px;
+  border-radius: 12px;
+  /* border: 1px solid #EAECF0; */
+  background: linear-gradient(345deg, #EC008C -2%, #FC6767 83.36%);
+  filter: drop-shadow(0px 0px 4px #FC6767);
+}
+
+.cu-inner-heading {
+  color: #333;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.cu-inner-sub-heading {
+  color: #1D1D1F;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.cu-icon2-wrapper {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 30px;
+  /* border: 1px solid #EAECF0; */
+  background: linear-gradient(345deg, #EC008C -2%, #FC6767 83.36%), #F9FAFB;
+  filter: drop-shadow(0px 0px 4px #FC6767);
+}
+
+.cu-form-wrapper {
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #D0D5DD;
+}
+
+.cu-form-heading {
+  color: #1D1D1F;
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.cu-form-sub-heading {
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.input-container {
+  display: flex;
+  width: 100%;
+  padding: 10px 10px 10px 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid #E2E4E9;
+  background: #FFF;
+  box-shadow: 0px 1px 2px 0px rgba(228, 229, 231, 0.24);
+}
+
+.input-container .icon {
+  margin-right: 5px;
+}
+
+.input-container input {
+  border: none;
+  outline: none;
+  flex: 1;
+  color: #868C98;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+}
+
+.cu-form-textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #E2E4E9;
+  background: #FFF;
+  box-shadow: 0px 1px 2px 0px rgba(228, 229, 231, 0.24);
+  color: #868C98;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  outline: none;
+}
+
+.cu-form-button-submit {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #FF007A;
+  background: #FF007A;
+  filter: drop-shadow(0px 0px 4px #FF007A);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* Footer section css */
+
+.footer-logo-harvv {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.footer-sub-heading {
+  color: #F5F5F6;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.footer-section-heading {
+  color: #F5F5F6;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.footer-section-sub-heading {
+  color: #F5F5F6;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.footer-si-wrapper {
+  padding: 8px;
+  border-radius: 8px;
+  background: #1F242F;
+}
+
+.footer-lower-section-wrapper {
+  padding: 12px 40px;
+}
+
+.footer-copyright {
+  color: #F5F5F6;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.footer-lower-links {
+  color: #F5F5F6;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration-line: underline;
+}
