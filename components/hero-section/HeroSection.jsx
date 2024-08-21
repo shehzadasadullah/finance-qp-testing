@@ -4,7 +4,7 @@ import image2 from "@/public/images/hero-img-2.png";
 import image3 from "@/public/images/hero-img-3.png";
 import image4 from "@/public/images/hero-img-4.png";
 
-function HeroSection() {
+function HeroSection({ heading }) {
   return (
     <>
       <div className="w-full rounded-xl md:pt-12 mt-2 flex justify-center items-center flex-col bg-black">
