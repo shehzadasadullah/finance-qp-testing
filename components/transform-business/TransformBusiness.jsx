@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import img1 from "@/public/images/wh-img.png";
 
 function TransformBusiness() {
@@ -38,51 +38,6 @@ function TransformBusiness() {
               Solutions
             </div>
           </div>
-          {/* <div className="flex justify-center gap-3 items-center md:justify-end flex-row">
-          <button
-            disabled={canPrev === false}
-            onClick={prevSlide}
-            className="li-slider-buttons flex justify-center items-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M15.8334 10H4.16669M4.16669 10L10 15.8333M4.16669 10L10 4.16666"
-                stroke="#667085"
-                stroke-width="1.66667"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-
-          <button
-            disabled={canNext === false}
-            onClick={nextSlide}
-            className="li-slider-buttons flex justify-center items-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M4.16669 10H15.8334M15.8334 10L10 4.16666M15.8334 10L10 15.8333"
-                stroke="#667085"
-                stroke-width="1.66667"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div> */}
         </div>
         <div className="w-full flex justify-center md:justify-start items-center">
           <button className="il-view-all-button w-full md:w-auto">

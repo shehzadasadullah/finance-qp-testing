@@ -1,51 +1,11 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import HeroSection from "@/components/hero-section/HeroSection";
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from "@headlessui/react";
-import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "@/public/logo/logo_harvv.png";
 import Slider from "@/components/carousal/Slider";
-import IndustriesSlider from "@/components/industries/IndustriesSlider";
-import Testimonials from "@/components/testimonials/Testimonials";
-import WhyChooseUs from "@/components/why-choose-us/WhyChooseUs";
-import TransformBusiness from "@/components/transform-business/TransformBusiness";
-import WhyHarvv from "@/components/why-harvv/WhyHarvv";
-import ContactUs from "@/components/contact-us/ContactUs";
 import Footer from "@/components/footer/Footer";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import xBrand from "@/public/images/x-brand.png";
 import jordan from "@/public/images/jordan.png";
-
-const navigation = [
-  { name: "Home", href: "/home", current: false },
-  { name: "About Us", href: "/about-us", current: true },
-  { name: "Pricing", href: "/pricing", current: false },
-  { name: "Industries", href: "#", current: false },
-  { name: "Other", href: "#", current: false },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import Navbar from "../Navbar/Navbar";
 
 function AboutUs() {
-  const router = useRouter();
-  const [activeTab, setActiveTab] = useState(0);
-
-  const tabs = [
-    { id: 0, label: "Invoice Factoring & Loans" },
-    { id: 1, label: "Agency" },
-    { id: 2, label: "Customer.io Clients" },
-  ];
   return (
     <>
       <Head>
@@ -58,114 +18,7 @@ function AboutUs() {
       <div className="w-full h-full bg-white">
         {/* Navbar Section */}
 
-        <Disclosure as="nav" className="w-full bg-[#fff] navbar-wrapper">
-          <div className="w-full bg-white px-2 sm:px-6 lg:px-12 lg:py-4 lg:pt-0">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
-                <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                  <span className="absolute -inset-0.5" />
-                  <span className="sr-only">Open main menu</span>
-                  <Bars3Icon
-                    aria-hidden="true"
-                    className="block h-6 w-6 group-data-[open]:hidden"
-                  />
-                  <XMarkIcon
-                    aria-hidden="true"
-                    className="hidden h-6 w-6 group-data-[open]:block"
-                  />
-                </DisclosureButton>
-              </div>
-              <div className="flex w-full flex-1 items-center justify-center sm:items-center sm:justify-between">
-                <div className="flex flex-shrink-0 items-center">
-                  <img alt="Harvv Logo" src={logo.src} className="h-8 w-auto" />
-                </div>
-                <div className="hidden navbar-links-wrapper sm:ml-6 sm:block">
-                  <div className="flex space-x-6">
-                    {navigation.map((item) => (
-                      <button
-                        key={item.name}
-                        type="button"
-                        onClick={() => {
-                          router.push(item.href);
-                        }}
-                        aria-current={item.current ? "page" : undefined}
-                        className={classNames(
-                          item.current
-                            ? "navbar-link-active text-[#FF007A]"
-                            : "navbar-link hover:text-[#FF007A]",
-                          "rounded-md px-3 py-2 text-sm font-medium"
-                        )}
-                      >
-                        {item.name}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <div className="absolute hidden inset-y-0 right-0 md:flex items-center pr-2 gap-x-3 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <a
-                    href={"https://b2b.harvv.com/"}
-                    className="navbar-login-button"
-                  >
-                    Log In
-                  </a>
-                  <a
-                    href={"https://b2b.harvv.com/register"}
-                    className="navbar-sign-up-button"
-                  >
-                    Sign Up
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <DisclosurePanel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <DisclosureButton
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  aria-current={item.current ? "page" : undefined}
-                  style={{
-                    filter: item.current
-                      ? "drop-shadow(0px 0px 4px #FF007A)"
-                      : "",
-                  }}
-                  className={classNames(
-                    item.current
-                      ? "navbar-link-active bg-[#FF007A] text-white"
-                      : "navbar-link hover:text-[#FF007A]",
-                    "block rounded-md px-3 py-2 text-base font-medium"
-                  )}
-                >
-                  {item.name}
-                </DisclosureButton>
-              ))}
-            </div>
-            <div className="w-full p-2 flex md:hidden items-center justify-center flex-col gap-3">
-              <button
-                style={{
-                  borderRadius: "5px",
-                }}
-                type="button"
-                className="navbar-login-button w-full border"
-              >
-                Log In
-              </button>
-              <button
-                style={{
-                  borderRadius: "5px",
-                }}
-                type="button"
-                className="navbar-sign-up-button w-full"
-              >
-                Sign Up
-              </button>
-            </div>
-          </DisclosurePanel>
-        </Disclosure>
+        <Navbar activePage={"about-us"}></Navbar>
 
         {/* About us top banner */}
 

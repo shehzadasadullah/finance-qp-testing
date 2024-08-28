@@ -4,13 +4,6 @@ import dynamic from "next/dynamic";
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 
 Builder.registerComponent(
-  dynamic(() => import("./components/Counter/Counter")),
-  {
-    name: "Counter",
-  }
-);
-
-Builder.registerComponent(
   dynamic(() => import("./components/Home/Home")),
   {
     name: "Home",
@@ -37,5 +30,26 @@ Builder.registerComponent(
   dynamic(() => import("./components/About-Us/AboutUs")),
   {
     name: "AboutUs",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Customer-Support/CustomerSupport")),
+  {
+    name: "CustomerSupport",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Navbar/Navbar")),
+  {
+    name: "Navbar",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Industry-Pages/PowerSports")),
+  {
+    name: "PowerSports",
   }
 );
