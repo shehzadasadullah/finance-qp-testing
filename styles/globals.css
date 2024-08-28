@@ -1052,7 +1052,7 @@ html {
 .tm-top-wrapper {
   border-radius: 16px;
   background-image: url('../public/images/ps-reviews-bg.png');
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
