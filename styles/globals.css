@@ -1175,3 +1175,115 @@ html {
   font-weight: 600;
   line-height: 20px;
 }
+
+/* Solar Industry Style CSS*/
+
+.si-top-wrapper {
+  border-radius: 16px;
+  background-image: url('../public/images/si-reviews-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.si-ctc-heading {
+  color: #101828;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 38px;
+}
+
+.si-ctc-wrapper {
+  padding: 24px;
+  border-radius: 24px;
+  background: #FFF;
+}
+
+.si-ctc-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  border-radius: 9999px;
+  background: #FFF0F9;
+}
+
+.si-ctc-bottom-heading {
+  color: #1D1D1F;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.si-ctc-bottom-sub-heading {
+  color: #344054;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.si-hero-heading {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+}
+
+.si-hero-sub-heading {
+  color: #344054;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.si-top-learn-how-wrapper {
+  border-radius: 12px;
+  background: linear-gradient(90deg, #FF00C7 0%, #FF007A 100%);
+  filter: drop-shadow(0px 0px 4px #FF007A);
+}
+
+.si-check-our-plans {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.si-check-our-plans-2 {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+/* FAQs CSS */
+
+.faq-question-heading {
+  color: #1D1D1F;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.faq-answer {
+  color: #333;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

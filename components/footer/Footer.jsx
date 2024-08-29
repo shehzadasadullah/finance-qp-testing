@@ -1,6 +1,8 @@
+import { useRouter } from "next/router";
 import React from "react";
 
 function Footer() {
+  const router = useRouter();
   return (
     <div className="p-6 md:p-[40px] flex justify-center flex-col items-center w-full">
       <div
@@ -62,24 +64,49 @@ function Footer() {
             <div className="text-center md:text-start footer-section-heading">
               Pages
             </div>
-            <div className="mt-5 text-center md:text-start footer-section-sub-heading">
+            <button
+              onClick={() => {
+                router.push("/home");
+              }}
+              className="mt-5 text-center md:text-start footer-section-sub-heading"
+            >
               Home
-            </div>
-            <div className="mt-2 text-center md:text-start footer-section-sub-heading">
+            </button>
+            <button
+              onClick={() => {
+                router.push("/about-us");
+              }}
+              className="mt-2 text-center md:text-start footer-section-sub-heading"
+            >
               About Us
-            </div>
+            </button>
             <div className="mt-2 text-center md:text-start footer-section-sub-heading">
               Blogs
             </div>
-            <div className="mt-2 text-center md:text-start footer-section-sub-heading">
+            <button
+              onClick={() => {
+                router.push("/faqs");
+              }}
+              className="mt-2 text-center md:text-start footer-section-sub-heading"
+            >
               FAQs
-            </div>
-            <div className="mt-2 text-center md:text-start footer-section-sub-heading">
+            </button>
+            <button
+              onClick={() => {
+                router.push("/pricing");
+              }}
+              className="mt-2 text-center md:text-start footer-section-sub-heading"
+            >
               Pricing
-            </div>
-            <div className="mt-2 text-center md:text-start footer-section-sub-heading">
+            </button>
+            <button
+              onClick={() => {
+                router.push("/customer-support");
+              }}
+              className="mt-2 text-center md:text-start footer-section-sub-heading"
+            >
               Customer Support
-            </div>
+            </button>
           </div>
         </div>
         <div className="flex w-full text-white justify-center items-center flex-col">

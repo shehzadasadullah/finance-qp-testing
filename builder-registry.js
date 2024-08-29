@@ -53,3 +53,17 @@ Builder.registerComponent(
     name: "PowerSports",
   }
 );
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Industry-Pages/Solar")),
+  {
+    name: "Solar",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/FAQs/FAQs")),
+  {
+    name: "FAQs",
+  }
+);
