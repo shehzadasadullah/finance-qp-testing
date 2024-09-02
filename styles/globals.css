@@ -340,6 +340,11 @@ html {
   border: 1px solid #F2F4F7;
 }
 
+.il-card-wrapper2 {
+  padding: 16px;
+  border-radius: 16px;
+}
+
 .li-card-top-button {
   display: flex;
   width: 40px;
@@ -377,6 +382,19 @@ html {
   background: #FFF;
   filter: drop-shadow(0px 0px 4px #fff);
   color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.li-card-button-bottom2 {
+  padding: 10px 14px;
+  border-radius: 81.013px;
+  background: #FFF;
+  filter: drop-shadow(0px 0px 4px #fff);
+  color: #FF007A;
   font-family: "Plus Jakarta Sans";
   font-size: 14px;
   font-style: normal;
@@ -543,14 +561,28 @@ html {
   box-shadow: 0px 1px 2px 0px rgba(228, 229, 231, 0.24);
 }
 
+.input-container2 {
+  display: flex;
+  width: 100%;
+  padding: 10px 10px 10px 12px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0px 1px 2px 0px rgba(228, 229, 231, 0.24);
+}
+
 .input-container .icon {
   margin-right: 5px;
 }
 
+.input-container2 .icon {
+  margin-right: 5px;
+}
+
 .input-container input {
-  border: none;
-  outline: none;
-  flex: 1;
   color: #868C98;
   font-family: "Plus Jakarta Sans";
   font-size: 14px;
@@ -558,6 +590,22 @@ html {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: -0.084px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+
+.input-container2 input {
+  color: #FFF0F9;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  border: none;
+  outline: none;
+  flex: 1;
 }
 
 .cu-form-textarea {
@@ -660,27 +708,58 @@ html {
 /* tabs adn pricing css */
 
 .tab-wrapper {
-  padding: 8px 12px;
-  border-radius: 6px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #EAECF0;
   background: #F9FAFB;
 }
 
 .tab-active {
+  padding: 0px 4px 12px 4px;
+  border-radius: 0px;
+  border-bottom: 2px solid #FF007A;
   color: #FF007A;
   font-family: "Plus Jakarta Sans";
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 24px;
 }
 
 .tab-non-active {
-  color: #344054;
+  padding: 0px 4px 12px 4px;
+  border-radius: 0px;
+  color: #667085;
   font-family: "Plus Jakarta Sans";
-  font-size: 12px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 18px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.tab-active2 {
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #FF007A;
+  box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+  color: #F9FAFB;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.tab-non-active2 {
+  padding: 8px 12px;
+  gap: 8px;
+  border-radius: 6px;
+  color: #667085;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .tab-top-main-heading {
@@ -709,10 +788,39 @@ html {
 }
 
 .pricing-header-wrapper {
-  padding: 12px 8px;
+  padding: 12px;
+  border-radius: 8px;
   background: #F9FAFB;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
+}
+
+.most-popular {
+  padding: 4px 12px;
+  border-radius: 0px 15px 0px 15px;
+  background: linear-gradient(345deg, #EC008C -2%, #FC6767 83.36%);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.pricing-new-sub-heading {
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.pricing-new-sub-heading2 {
+  color: #475467;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .pricing-pay-with {
@@ -742,10 +850,10 @@ html {
 .pricing-card-plan-heading {
   color: #101828;
   font-family: "Plus Jakarta Sans";
-  font-size: 20px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 32px;
 }
 
 .pricing-card-plan-sub-heading {
@@ -792,6 +900,24 @@ html {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
+  line-height: 24px;
+}
+
+.pricing-harvv-your-brand {
+  color: #FF4405;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.pricing-the-includes {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
   line-height: 24px;
 }
 
@@ -1057,6 +1183,44 @@ html {
   background-position: center;
 }
 
+.hm-top-wrapper {
+  border-radius: 16px;
+  background-image: url('../public/images/reviews-home-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hm-reviews-tag-wrapper {
+  padding: 6px 8px;
+  border-radius: 54px;
+  border: 0.6px solid rgba(255, 255, 255, 0.30);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0px 4px 52px 4px rgba(16, 24, 40, 0.25), 0px 0.532px 1.063px 0px rgba(16, 24, 40, 0.05);
+  backdrop-filter: blur(100px);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 9.235px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18.576px;
+}
+
+.hm-reviews-tag-icon-wrapper {
+  display: flex;
+  width: 21.27px;
+  height: 21.27px;
+  padding: 5.317px;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md, 0px);
+  flex-shrink: 0;
+  border-radius: 34.43px;
+  border: 0.443px solid rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.60);
+  backdrop-filter: blur(3.5449604988098145px);
+}
+
 .ps-ts-card-wrapper {
   padding: 16px 20px;
   border-radius: 16px;
@@ -1286,4 +1450,73 @@ html {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+
+.faq-textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #D0D5DD;
+  background: rgba(255, 255, 255, 0.20);
+  color: #E2E4E9;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+}
+
+.faq-services-wrapper {
+  padding: 4px 16px 4px 8px;
+  border-radius: 100px;
+  border: 1px solid #D0D5DD;
+  background: rgba(255, 255, 255, 0.20);
+}
+
+.faq-services-heading {
+  color: #fff;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.12px;
+}
+
+/* Homepage new CSS */
+
+.hns-wcu-heading {
+  color: #1D1D1F;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.hns-wcu-sub-heading {
+  color: #344054;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.hns-wcu-cfc-heading {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.hns-wcu-cfc-sub-heading {
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }

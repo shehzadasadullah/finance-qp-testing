@@ -31,18 +31,23 @@ function Home({ headingText }) {
           <HeroSection></HeroSection>
         </div>
 
+        {/* Industries Slider/Carousal */}
+
+        <div className="w-full hidden md:flex text-center mb-5 mt-3">
+          <Slider></Slider>
+        </div>
+
         {/* Trusted by text */}
 
-        <div className="w-full hidden md:flex justify-center mt-3 mb-5 items-center">
+        {/* <div className="w-full hidden md:flex justify-center mt-3 mb-5 items-center">
           <div className="w-full text-center tb-text">
             Trust and Proven Reputation
           </div>
-        </div>
-
-        {/* Industries Slider/Carousal */}
-
-        <div className="w-full hidden md:flex text-center mb-5">
-          <Slider></Slider>
+        </div> */}
+        <div className="w-full hidden md:flex justify-center mt-3 mb-5 items-center">
+          <button className="il-view-all-button w-full md:w-auto mt-3 md:mt-0">
+            Start My Journey Now
+          </button>
         </div>
 
         {/* Industries Slider/Carousal List */}
@@ -51,9 +56,34 @@ function Home({ headingText }) {
           <IndustriesSlider></IndustriesSlider>
         </div>
 
+        {/* Why choose us Section */}
+
+        <div className="w-full px-2 lg:px-4 pb-2 lg:pb-4">
+          <div
+            style={{
+              background: "linear-gradient(304deg, #FFF0F9 3.43%, #FFF 92.37%)",
+            }}
+            className="w-full rounded-[16px]"
+          >
+            <WhyChooseUs></WhyChooseUs>
+          </div>
+          <div className="rounded-[16px] my-8 md:pt-5 w-full">
+            <TransformBusiness></TransformBusiness>
+          </div>
+          <div className="bg-[#F9FAFB] rounded-[16px] w-full">
+            <WhyHarvv></WhyHarvv>
+          </div>
+        </div>
+
+        {/* Testimonials Section */}
+
+        <div className="w-full">
+          <Testimonials></Testimonials>
+        </div>
+
         {/* Ready to transform your business */}
 
-        <div className="w-full flex justify-center items-center mt-5 px-2 lg:px-4 pb-2 lg:pb-4">
+        {/* <div className="w-full flex justify-center items-center mt-3 px-2 lg:px-4 pb-2 lg:pb-4">
           <div className="w-full tb-wrapper border-2 flex justify-center items-center flex-col">
             <div className="w-full tb-div1-wrapper">
               <div className="w-full flex p-10 md:pt-[100px] md:pr-[16px] md:pb-[100px] md:pl-[16px] justify-center items-center flex-col tb-div2-wrapper">
@@ -99,23 +129,7 @@ function Home({ headingText }) {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Testimonials Section */}
-
-        <div className="w-full px-2 lg:px-4 pb-2 lg:pb-0">
-          <Testimonials></Testimonials>
-        </div>
-
-        {/* Why choose us Section */}
-
-        <div className="w-full px-2 lg:px-4 pb-2 lg:pb-4">
-          <div className="w-full bg-[#F9FAFB] rounded-[16px]">
-            <WhyChooseUs></WhyChooseUs>
-            <TransformBusiness></TransformBusiness>
-            <WhyHarvv></WhyHarvv>
-          </div>
-        </div>
+        </div> */}
 
         {/* Contact Us Section */}
 

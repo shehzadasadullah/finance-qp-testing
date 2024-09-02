@@ -3,6 +3,7 @@ import image1 from "@/public/images/hero-img-1.png";
 import image2 from "@/public/images/hero-img-2.png";
 import image3 from "@/public/images/hero-img-3.png";
 import image4 from "@/public/images/hero-img-4.png";
+import IndustriesSliderHeroSection from "../industries/IndustriesSliderHeroSection";
 
 function HeroSection({ heading }) {
   return (
@@ -38,28 +39,45 @@ function HeroSection({ heading }) {
                 </svg>
                 <div className="ms-1">Financing Solutions</div>
               </div>
-              <div className="hs-wrapper3-financing-heading w-full text-center mt-6">
-                Transform Your Cash Flow with
+              <div className="hs-wrapper3-financing-heading md:px-[28%] w-full text-center mt-6">
+                Unlock 30, 60, 90 Day Terms—Get Paid Today, Boost Your
+                Conversions
               </div>
-              <div className="hs-wrapper3-financing-heading w-full text-center">
-                Harvv Financing
-              </div>
-              <div className="hs-wrapper3-financing-sub-heading mt-6 mb-6 lg:mb-12 w-full text-center">
-                100% Advance Rate, No Risk, Low Fees
+              <div className="hs-wrapper3-financing-sub-heading px-3 md:px-0 mt-6 mb-6 w-full text-center">
+                100% Upfront, No Guarantees, Low Fees—Power Your Cash Flow and
+                Sales
               </div>
             </div>
-            <div className="w-full pb-6 md:pb-0 flex justify-center items-center flex-col">
-              <button className="hs-wrapper2-started-button">
+            <div className="w-full pb-6 md:pb-0 flex px-3 md:px-0 justify-center items-center flex-col md:flex-row gap-3">
+              <div className="w-full md:w-[337px]">
+                <div class="input-container2 w-full">
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M3.25 3.75H16.75C16.9489 3.75 17.1397 3.82902 17.2803 3.96967C17.421 4.11032 17.5 4.30109 17.5 4.5V15.5C17.5 15.6989 17.421 15.8897 17.2803 16.0303C17.1397 16.171 16.9489 16.25 16.75 16.25H3.25C3.05109 16.25 2.86032 16.171 2.71967 16.0303C2.57902 15.8897 2.5 15.6989 2.5 15.5V4.5C2.5 4.30109 2.57902 4.11032 2.71967 3.96967C2.86032 3.82902 3.05109 3.75 3.25 3.75ZM16 6.9285L10.054 12.2535L4 6.912V14.75H16V6.9285ZM4.38325 5.25L10.0457 10.2465L15.6265 5.25H4.38325Z"
+                        fill="#FFF0F9"
+                      />
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    className="bg-transparent"
+                  />
+                </div>
+              </div>
+              <button className="w-full md:w-auto hs-wrapper2-started-button">
                 Get Started
               </button>
             </div>
-            <div className="p-2 hidden md:flex">
-              <div className="flex gap-3 justify-center items-center flex-col md:flex-row hs-wrapper2-images-div-wrapper mt-4 lg:mt-10">
-                <img src={image1.src} alt="Image 1" className="h-56 lg:h-72" />
-                <img src={image2.src} alt="Image 2" className="h-56 lg:h-72" />
-                <img src={image3.src} alt="Image 3" className="h-56 lg:h-72" />
-                <img src={image4.src} alt="Image 4" className="h-56 lg:h-72" />
-              </div>
+            <div className="w-full md:mt-4">
+              <IndustriesSliderHeroSection></IndustriesSliderHeroSection>
             </div>
           </div>
         </div>
