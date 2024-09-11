@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function ContactUs() {
@@ -57,10 +58,20 @@ function ContactUs() {
                   You can email us here
                 </div>
                 <div className="w-full text-center cu-inner-sub-heading md:text-start">
-                  b2b@harvv.com
+                  <Link
+                    target="_blank"
+                    href="mailto:b2b@harvv.com"
+                    className=""
+                  >
+                    b2b@harvv.com
+                  </Link>
                 </div>
               </div>
-              <div className="flex justify-center items-center cu-icon2-wrapper">
+              <Link
+                target="_blank"
+                href="mailto:b2b@harvv.com"
+                className="flex justify-center items-center cu-icon2-wrapper"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -76,7 +87,7 @@ function ContactUs() {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </div>
+              </Link>
             </div>
             <div className="w-full cu-details-wrapper flex justify-center items-center flex-col md:flex-row gap-3">
               <div className="cu-icon-wrapper flex justify-center items-center">
@@ -101,10 +112,16 @@ function ContactUs() {
                   Or give us a call
                 </div>
                 <div className="w-full text-center cu-inner-sub-heading md:text-start">
-                  +1 (817) 239-3900
+                  <Link href="tel:+18449003096" target="_blank">
+                    +1 (844) 900-3096
+                  </Link>
                 </div>
               </div>
-              <div className="flex justify-center items-center cu-icon2-wrapper">
+              <Link
+                href="tel:+18449003096"
+                target="_blank"
+                className="flex justify-center items-center cu-icon2-wrapper"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -120,7 +137,7 @@ function ContactUs() {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </div>
+              </Link>
             </div>
             <div className="w-full cu-details-wrapper flex justify-center items-center flex-col md:flex-row gap-3">
               <div className="cu-icon-wrapper flex justify-center items-center">
@@ -148,10 +165,16 @@ function ContactUs() {
                   WhatsApp
                 </div>
                 <div className="w-full text-center cu-inner-sub-heading md:text-start">
-                  +1 (817) 239-3900
+                  <Link href="https://wa.me/18449003096" target="_blank">
+                    +1 (844) 900-3096
+                  </Link>
                 </div>
               </div>
-              <div className="flex justify-center items-center cu-icon2-wrapper">
+              <Link
+                href="https://wa.me/18449003096"
+                target="_blank"
+                className="flex justify-center items-center cu-icon2-wrapper"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -167,7 +190,7 @@ function ContactUs() {
                     stroke-linejoin="round"
                   />
                 </svg>
-              </div>
+              </Link>
             </div>
             <div className="w-full cu-details-wrapper flex justify-center items-center flex-col md:flex-row gap-3">
               <div className="cu-icon-wrapper flex justify-center items-center">
@@ -198,11 +221,37 @@ function ContactUs() {
                 <div className="w-full cu-inner-heading text-center md:text-start">
                   Location
                 </div>
-                <div className="w-full text-center cu-inner-sub-heading md:text-start">
+                <div
+                  onClick={() => {
+                    const generateGoogleMapsUrl = (locationText) => {
+                      const encodedLocation = encodeURIComponent(locationText);
+                      return `https://www.google.com/maps/search/?api=1&query=${encodedLocation}`;
+                    };
+
+                    const locationText =
+                      "2451 W Grapevine Circle, Suite 565, Grapevine, TX 75028";
+                    const googleMapsUrl = generateGoogleMapsUrl(locationText);
+                    window.open(googleMapsUrl, "_blank");
+                  }}
+                  className="w-full cursor-pointer text-center cu-inner-sub-heading md:text-start"
+                >
                   2451 W Grapevine Circle, Suite 565, Grapevine, TX 75028
                 </div>
               </div>
-              <div className="flex justify-center items-center cu-icon2-wrapper">
+              <div
+                onClick={() => {
+                  const generateGoogleMapsUrl = (locationText) => {
+                    const encodedLocation = encodeURIComponent(locationText);
+                    return `https://www.google.com/maps/search/?api=1&query=${encodedLocation}`;
+                  };
+
+                  const locationText =
+                    "2451 W Grapevine Circle, Suite 565, Grapevine, TX 75028";
+                  const googleMapsUrl = generateGoogleMapsUrl(locationText);
+                  window.open(googleMapsUrl, "_blank");
+                }}
+                className="cursor-pointer flex justify-center items-center cu-icon2-wrapper"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"

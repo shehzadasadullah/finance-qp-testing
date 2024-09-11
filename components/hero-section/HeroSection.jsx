@@ -11,8 +11,8 @@ function HeroSection({ heading }) {
       <div className="w-full rounded-xl md:pt-12 mt-2 flex justify-center items-center flex-col bg-black">
         <div className="hs-wrapper-main rounded-xl w-full h-full">
           <div className="hs-wrapper-2 rounded-xl w-full h-full flex justify-center items-center flex-col">
-            <div className="hs-wrapper-3 rounded-xl flex justify-center items-center flex-col w-full h-full">
-              <div className="hs-wrapper3-financing-div mt-12 flex justify-center items-center flex-row">
+            <div className="hs-wrapper-3 p-3 md:p-10 rounded-xl flex justify-center items-center flex-col w-full h-full">
+              <div className="hs-wrapper3-financing-div-new mt-7 md:mt-0 flex justify-center items-center flex-row">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="17"
@@ -20,14 +20,14 @@ function HeroSection({ heading }) {
                   viewBox="0 0 17 16"
                   fill="none"
                 >
-                  <g clip-path="url(#clip0_6020_4635)">
+                  <g clip-path="url(#clip0_7472_10906)">
                     <path
                       d="M6.37952 0.124756C5.56772 4.53441 4.90962 5.19247 0.5 6.00428C4.90965 6.81608 5.56772 7.47415 6.37952 11.8838C7.19133 7.47415 7.8494 6.81608 12.259 6.00428C7.8494 5.19247 7.19129 4.53441 6.37952 0.124756ZM12.7609 8.397C12.2446 11.2014 11.826 11.6199 9.02171 12.1361C11.826 12.6524 12.2446 13.071 12.7609 15.8753C13.2771 13.071 13.6957 12.6524 16.5 12.1361C13.6956 11.6199 13.2771 11.2014 12.7609 8.397Z"
-                      fill="white"
+                      fill="#FABB05"
                     />
                   </g>
                   <defs>
-                    <clipPath id="clip0_6020_4635">
+                    <clipPath id="clip0_7472_10906">
                       <rect
                         width="16"
                         height="16"
@@ -37,15 +37,13 @@ function HeroSection({ heading }) {
                     </clipPath>
                   </defs>
                 </svg>
-                <div className="ms-1">Financing Solutions</div>
+                <div className="ms-1">No Personal Guarantee Required</div>
               </div>
-              <div className="hs-wrapper3-financing-heading md:px-[28%] w-full text-center mt-6">
-                Unlock 30, 60, 90 Day Terms—Get Paid Today, Boost Your
-                Conversions
+              <div className="hs-wrapper3-financing-heading px-3 md:px-[28%] w-full text-center mt-6">
+                Offer your B2B Clients Net 30, 60 and 90 Day terms.
               </div>
-              <div className="hs-wrapper3-financing-sub-heading px-3 md:px-0 mt-6 mb-6 w-full text-center">
-                100% Upfront, No Guarantees, Low Fees—Power Your Cash Flow and
-                Sales
+              <div className="hs-wrapper3-financing-sub-heading px-3 md:px-0 mt-6 w-full text-center">
+                Get Paid Upfront, Seamless integration, Quick and Simple
               </div>
             </div>
             <div className="w-full pb-6 md:pb-0 flex px-3 md:px-0 justify-center items-center flex-col md:flex-row gap-3">
@@ -76,7 +74,7 @@ function HeroSection({ heading }) {
                 Get Started
               </button>
             </div>
-            <div className="w-full md:mt-4">
+            <div className="w-full md:mt-12">
               <IndustriesSliderHeroSection></IndustriesSliderHeroSection>
             </div>
           </div>

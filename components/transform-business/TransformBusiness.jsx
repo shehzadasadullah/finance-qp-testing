@@ -31,18 +31,18 @@ function TransformBusiness() {
         <div className="w-full flex md:justify-between justify-center flex-col md:flex-row items-center">
           <div className="w-full flex md:justify-start justify-center items-center flex-col">
             <div className="w-full text-center md:text-start il-industries-serve">
-              Step into the Future of Financing, Unlock Seamless Financing
-              Solutions!
+              In-House Terms Cost You More Than You Think, See Why Your In-House
+              Terms Could Be Costing You Clients
             </div>
             <div className="w-full mt-0 md:mt-1 mb-3 md:mb-0 text-center md:text-start il-industries-serve-sub">
-              Unlock Your Business Potential with Our Tailored Financing
-              Solutions
+              Our Data Shows How Harvv Delivers Better Results and Faster Growth
+              and Why Harvv Is a Smarter, More Profitable Choice.
             </div>
           </div>
         </div>
         <div className="w-full flex justify-center md:justify-start items-center">
           <button className="il-view-all-button w-full md:w-auto">
-            Let's Go
+            Let's Chat
           </button>
         </div>
       </div>

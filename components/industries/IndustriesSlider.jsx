@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import img1 from "@/public/images/ind-bg1.png";
-import img2 from "@/public/images/ind-bg2.png";
-import img3 from "@/public/images/ind-bg3.png";
+import img1 from "../../public/images/industry-images/vertical/cpg.png";
+import img2 from "../../public/images/industry-images/vertical/retailers.png";
+import img3 from "../../public/images/industry-images/vertical/powersports.png";
+import img4 from "../../public/images/industry-images/vertical/solar.png";
+import img5 from "../../public/images/industry-images/vertical/d2c-retail.png";
+import img6 from "../../public/images/industry-images/vertical/construction.png";
+import img7 from "../../public/images/industry-images/vertical/healthCare.png";
+import img8 from "../../public/images/industry-images/vertical/technology.png";
+import img9 from "../../public/images/industry-images/vertical/agriculture.png";
+import img10 from "../../public/images/industry-images/vertical/automotive.png";
+import img11 from "../../public/images/industry-images/vertical/fashion.png";
+import img12 from "../../public/images/industry-images/vertical/logistics.png";
+import img13 from "../../public/images/industry-images/vertical/hospitality.png";
+import { useRouter } from "next/router";
 
 function IndustriesSlider() {
   const isXLarge = useMediaQuery({ query: "(min-width: 1280px)" });
@@ -11,6 +22,7 @@ function IndustriesSlider() {
   const isSmall = useMediaQuery({ query: "(max-width: 767px)" });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesToShow, setSlidesToShow] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     setSlidesToShow(isXLarge ? 6.2 : isLarge ? 4 : isMedium ? 3 : 1);
@@ -20,50 +32,81 @@ function IndustriesSlider() {
     {
       url: "#",
       heading: "CPG Distributors and Manufacturers",
-      subHeading: "Efficient Supply Chain Financing Solutions",
+      subHeading: "Addressing supply chain financing needs.",
       bgSrc: img1.src,
     },
     {
       url: "#",
       heading: "Retailers",
-      subHeading: "Support Inventory Funding to Keep Operations Smooth",
+      subHeading: "Ensuring smooth inventory financing.",
       bgSrc: img2.src,
     },
     {
-      url: "#",
-      heading: "Power sports Dealers & Manufacturers",
-      subHeading: "Financing Support for High Value Items",
+      url: "/industries/powersports",
+      heading: "Powersports Dealers and Manufacturers",
+      subHeading: "Supporting high-ticket item financing.",
       bgSrc: img3.src,
     },
     {
-      url: "#",
+      url: "/industries/solar",
       heading: "Solar Power Players",
-      subHeading: "Facilitating Project Financing for a Sustainable Future",
-      bgSrc: img1.src,
+      subHeading: "Facilitating project financing.",
+      bgSrc: img4.src,
     },
     {
       url: "#",
-      heading: "CPG Distributors and Manufacturers",
-      subHeading: "Financing Support for High Value Items",
-      bgSrc: img2.src,
+      heading: "D2C Retail",
+      subHeading: "Enhancing direct-to-consumer sales with financing.",
+      bgSrc: img5.src,
     },
     {
       url: "#",
-      heading: "Retailers",
-      subHeading: "Facilitating Project Financing for a Sustainable Future",
-      bgSrc: img3.src,
+      heading: "Construction",
+      subHeading: "Offering flexibility for project-based invoicing.",
+      bgSrc: img6.src,
     },
     {
       url: "#",
-      heading: "Power sports Dealers & Manufacturers",
-      subHeading: "Financing Support for High Value Items",
-      bgSrc: img1.src,
+      heading: "Healthcare",
+      subHeading: "Streamlining payment processes for medical supplies.",
+      bgSrc: img7.src,
     },
     {
       url: "#",
-      heading: "Solar Power Players",
-      subHeading: "Facilitating Project Financing for a Sustainable Future",
-      bgSrc: img2.src,
+      heading: "Technology",
+      subHeading: "Accelerating growth with tech-specific financing.",
+      bgSrc: img8.src,
+    },
+    {
+      url: "#",
+      heading: "Agriculture",
+      subHeading: "Empowering farming operations with timely funds.",
+      bgSrc: img9.src,
+    },
+    {
+      url: "#",
+      heading: "Automotive",
+      subHeading:
+        "Managing cash flow for auto parts and vehicle manufacturers.",
+      bgSrc: img10.src,
+    },
+    {
+      url: "#",
+      heading: "Fashion",
+      subHeading: "Keeping production lines moving.",
+      bgSrc: img11.src,
+    },
+    {
+      url: "#",
+      heading: "Logistics",
+      subHeading: "Optimizing supply chain finances.",
+      bgSrc: img12.src,
+    },
+    {
+      url: "#",
+      heading: "Hospitality",
+      subHeading: "Enhancing guest experiences through operational financing.",
+      bgSrc: img13.src,
     },
   ];
 
@@ -188,7 +231,12 @@ function IndustriesSlider() {
                 >
                   <div className="w-full h-full flex justify-center items-center flex-col">
                     <div className="w-full flex justify-end items-center flex-row">
-                      <button className="li-card-top-button">
+                      <button
+                        onClick={() => {
+                          router.push(slide.url);
+                        }}
+                        className="li-card-top-button"
+                      >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
@@ -213,7 +261,12 @@ function IndustriesSlider() {
                       <div className="mb-3 w-full text-center md:text-start li-card-subHeading">
                         {slide.subHeading}
                       </div>
-                      <button className="w-full li-card-button-bottom flex justify-center gap-2 md:gap-0 md:justify-between items-center flex-row">
+                      <button
+                        onClick={() => {
+                          router.push(slide.url);
+                        }}
+                        className="w-full li-card-button-bottom flex justify-center gap-2 md:gap-0 md:justify-between items-center flex-row"
+                      >
                         <div>Learn More</div>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
