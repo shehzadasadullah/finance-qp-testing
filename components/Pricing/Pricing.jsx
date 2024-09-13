@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Footer from "@/components/footer/Footer";
 import xBrand from "@/public/images/x-brand.png";
 import Navbar from "../Navbar/Navbar";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
+import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
+import qb_Logo from "@/public/images/quickBooks_logo.png";
 
 function Pricing() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeTab2, setActiveTab2] = useState(0);
+  const [activeTabSellerOrBuyer, setActiveTabSellerOrBuyer] = useState(0);
+  const [open, setOpen] = useState(false);
 
   const tabs = [
     { id: 0, label: "I Want to Offer Net Terms" },
@@ -17,6 +28,20 @@ function Pricing() {
     { id: 0, label: "Monthly" },
     { id: 1, label: "Annually" },
   ];
+
+  const tabsSellerOrBuyer = [
+    { id: 0, label: "As Seller" },
+    { id: 1, label: "As Buyer" },
+  ];
+
+  useEffect(() => {
+    console.log(activeTabSellerOrBuyer);
+    if (activeTabSellerOrBuyer === 1) {
+      setOpen(true);
+      console.log("Called 1");
+    }
+  }, [activeTabSellerOrBuyer]);
+
   return (
     <>
       <Head>
@@ -37,7 +62,29 @@ function Pricing() {
           <div className="w-full tb-wrapper border-2 flex justify-center items-center flex-col">
             <div className="w-full flex p-8 md:pt-[100px] md:pr-[16px] md:pb-[100px] md:pl-[16px] justify-center items-center flex-col tb-div1-wrapper">
               <div className="w-full">
-                <div className="w-full flex text-center tb-main-heading2 justify-center items-center">
+                <div className="w-full flex text-center justify-center items-center">
+                  <div className="w-full flex justify-center gap-2 items-center">
+                    <div className="tab-wrapper-seller-buyer flex justify-center items-center flex-row gap-2">
+                      {tabsSellerOrBuyer.map((tab, index) => (
+                        <button
+                          key={index}
+                          className={`transition-all ${
+                            activeTabSellerOrBuyer === index
+                              ? "tab-wrapper-seller-buyer-active"
+                              : "tab-wrapper-seller-buyer-non-active"
+                          }`}
+                          onClick={() => {
+                            setActiveTabSellerOrBuyer(index);
+                          }}
+                        >
+                          {tab.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 md:mt-8 w-full flex text-center tb-main-heading2 justify-center items-center">
                   Tailored Solutions, Flexible
                   <br />
                   Plans for Every Need
@@ -5187,6 +5234,202 @@ function Pricing() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+
+      <Dialog open={open} onClose={() => {}} className="relative z-10">
+        <DialogBackdrop
+          transition
+          className="fixed inset-0 bg-[#0C111D] bg-opacity-60 backdrop-blur-md transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+        />
+
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+            <DialogPanel
+              transition
+              className="relative modal-custom-css transform overflow-hidden rounded-xl bg-white text-left transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            >
+              <div className="w-full flex justify-center items-center flex-col">
+                {/* Modal Header */}
+
+                <div className="w-full border-b-[1px] p-6 border-[#EAECF0] flex justify-between items-start flex-row">
+                  <div className="w-full gap-3 flex justify-start items-center flex-row">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="49"
+                      height="48"
+                      viewBox="0 0 49 48"
+                      fill="none"
+                    >
+                      <rect
+                        x="0.444336"
+                        width="48"
+                        height="48"
+                        rx="8"
+                        fill="url(#paint0_linear_8081_11179)"
+                      />
+                      <path
+                        d="M17.1108 12.4793V27.7925L21.7818 24.4883L32.4092 17.1029L32.4083 16.6305L27.7373 13.3845V14.6902L21.7818 18.829V9.24902L17.1108 12.4793Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M32.4092 36.1519V20.8387L27.7382 24.1429L17.1108 31.5283L17.1118 32.0007L21.7827 35.2468V33.941L27.7382 29.8023V39.3822L32.4092 36.1519Z"
+                        fill="white"
+                      />
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_8081_11179"
+                          x1="32.235"
+                          y1="53.4959"
+                          x2="19.4502"
+                          y2="5.07886"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#EC008C" />
+                          <stop offset="1" stop-color="#FC6767" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div className="text-start c-modal-heading">
+                      Welcome to Harvv! 🌟
+                    </div>
+                  </div>
+
+                  {/* Close Button */}
+
+                  <svg
+                    onClick={() => {
+                      setOpen(false);
+                      setActiveTabSellerOrBuyer(0);
+                    }}
+                    className="cursor-pointer"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M18.4443 6L6.44434 18M6.44434 6L18.4443 18"
+                      stroke="#98A2B3"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                {/* Modal Body */}
+
+                <div className="w-full p-6 gap-3 flex justify-center items-center flex-col">
+                  <div className="w-full c-modal-benefits text-center md:text-start">
+                    Discover the Benefits of Shopping with Harvv:
+                  </div>
+
+                  {/* Feature 1 */}
+
+                  <div className="c-modal-features-wrapper gap-3 w-full flex justify-start items-center flex-row">
+                    <div className="rounded-full flex justify-center items-center bg-[#38C793] p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.626 5.2726L7.26304 11.6365L3.44434 7.8178L4.71694 6.5452L7.26304 9.0913L12.3534 4L13.626 5.2726Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div className="w-full text-start">
+                      As a buyer, you can sign up for free.
+                    </div>
+                  </div>
+
+                  {/* Feature 2 */}
+
+                  <div className="c-modal-features-wrapper gap-3 w-full flex justify-start items-center flex-row">
+                    <div className="rounded-full flex justify-center items-center bg-[#38C793] p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.626 5.2726L7.26304 11.6365L3.44434 7.8178L4.71694 6.5452L7.26304 9.0913L12.3534 4L13.626 5.2726Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div className="w-full text-start">Fast Approvals.</div>
+                  </div>
+
+                  {/* Feature 3 */}
+
+                  <div className="c-modal-features-wrapper gap-3 w-full flex justify-start items-center flex-row">
+                    <div className="rounded-full flex justify-center items-center bg-[#38C793] p-1">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17"
+                        height="16"
+                        viewBox="0 0 17 16"
+                        fill="none"
+                      >
+                        <path
+                          d="M13.626 5.2726L7.26304 11.6365L3.44434 7.8178L4.71694 6.5452L7.26304 9.0913L12.3534 4L13.626 5.2726Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div className="w-full text-start">
+                      Quick and easy sign up.
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
+
+                  <Link
+                    href="https://b2b.harvv.com/register"
+                    target="_blank"
+                    className="w-full mt-2 pricing-footer-button text-center"
+                  >
+                    Sign Up
+                  </Link>
+
+                  <div className="w-full c-modal-benefits text-center">OR</div>
+
+                  <Link
+                    href="https://b2b.harvv.com/register"
+                    target="_blank"
+                    className="w-full flex justify-center items-center"
+                  >
+                    <svg
+                      width="201"
+                      height="48"
+                      viewBox="0 0 201 48"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 4C0 1.79086 1.79086 0 4 0H197C199.209 0 201 1.79086 201 4V44C201 46.2091 199.209 48 197 48H4C1.79086 48 0 46.2091 0 44V4Z"
+                        fill="#0077C5"
+                      />
+                      <path
+                        d="M30.4805 18C29.4005 16.98 27.7805 16.48 26.3605 16.48C23.8005 16.48 21.1805 17.76 21.1805 20.64C21.1805 23.28 23.0405 24.12 24.7605 24.66C26.5405 25.22 28.0205 25.64 28.0205 27.12C28.0205 28.64 26.6405 29.22 25.4605 29.22C24.3405 29.22 23.0605 28.62 22.3605 27.66L20.5605 29.34C21.6805 30.66 23.5805 31.36 25.4205 31.36C28.2005 31.36 30.5805 29.88 30.5805 26.84C30.5805 24.06 28.2605 23.26 26.4405 22.7C24.8405 22.2 23.7405 21.82 23.7405 20.52C23.7405 19.14 25.0805 18.58 26.2405 18.58C27.2405 18.58 28.3005 19.1 28.8405 19.8L30.4805 18ZM33.0249 31H35.4249V21.4H33.0249V31ZM32.6849 18.14C32.6849 18.9 33.3249 19.58 34.2049 19.58C35.0849 19.58 35.7649 18.96 35.7649 18.14C35.7649 17.32 35.0849 16.7 34.2049 16.7C33.3249 16.7 32.6849 17.38 32.6849 18.14ZM45.8165 21.4V22.84H45.7765C45.0765 21.68 43.8165 21.12 42.4765 21.12C39.5765 21.12 37.7765 23.38 37.7765 26.16C37.7765 28.88 39.6365 31.16 42.5165 31.16C43.8365 31.16 44.9565 30.66 45.6565 29.72H45.6965V30.42C45.6965 32.32 44.9765 33.72 42.6565 33.72C41.4565 33.72 40.2165 33.24 39.2965 32.36L37.9165 34.22C39.1565 35.24 41.1165 35.8 42.6765 35.8C46.4165 35.8 48.0965 33.6 48.0965 30.14V21.4H45.8165ZM42.9765 23.08C44.7165 23.08 45.8165 24.48 45.8165 26.14C45.8165 27.74 44.7365 29.18 42.9565 29.18C41.2365 29.18 40.2165 27.66 40.2165 26.14C40.2165 24.44 41.2365 23.08 42.9765 23.08ZM50.9732 31H53.3732V25.72C53.3732 24.44 54.0932 23.12 55.6132 23.12C57.1532 23.12 57.4132 24.54 57.4132 25.68V31H59.8132V25C59.8132 23.04 58.7732 21.12 56.2732 21.12C54.8532 21.12 53.7132 21.98 53.2932 22.94H53.2532V21.4H50.9732V31ZM67.6538 31H70.0538V21.4H67.6538V31ZM67.3138 18.14C67.3138 18.9 67.9538 19.58 68.8338 19.58C69.7138 19.58 70.3938 18.96 70.3938 18.14C70.3938 17.32 69.7138 16.7 68.8338 16.7C67.9538 16.7 67.3138 17.38 67.3138 18.14ZM72.9654 31H75.3654V25.72C75.3654 24.44 76.0854 23.12 77.6054 23.12C79.1454 23.12 79.4054 24.54 79.4054 25.68V31H81.8054V25C81.8054 23.04 80.7654 21.12 78.2654 21.12C76.8454 21.12 75.7054 21.98 75.2854 22.94H75.2454V21.4H72.9654V31ZM91.586 31H94.026L96.186 24.28H96.226L98.406 31H100.846L104.166 21.4H101.666L99.626 28.28H99.586L97.506 21.4H94.946L92.886 28.28H92.846L90.846 21.4H88.246L91.586 31ZM105.72 31H108.12V21.4H105.72V31ZM105.38 18.14C105.38 18.9 106.02 19.58 106.9 19.58C107.78 19.58 108.46 18.96 108.46 18.14C108.46 17.32 107.78 16.7 106.9 16.7C106.02 16.7 105.38 17.38 105.38 18.14ZM111.332 23.32V27.8C111.332 29.64 111.912 31.2 114.452 31.2C114.992 31.2 115.632 31.1 116.052 30.94L115.972 29.06C115.692 29.2 115.272 29.26 114.952 29.26C113.892 29.26 113.692 28.64 113.692 27.78V23.32H116.092V21.4H113.692V18.62H111.332V21.4H109.652V23.32H111.332ZM123.169 21.12C121.749 21.12 120.689 21.94 120.309 22.74H120.269V15.88H117.869V31H120.269V25.76C120.269 24.48 121.009 23.18 122.529 23.18C124.069 23.18 124.309 24.58 124.309 25.72V31H126.709V25C126.709 23.04 125.669 21.12 123.169 21.12ZM134.628 31H137.148V16.84H134.628V31ZM140.153 31H142.553V25.72C142.553 24.44 143.273 23.12 144.793 23.12C146.333 23.12 146.593 24.54 146.593 25.68V31H148.993V25C148.993 23.04 147.953 21.12 145.453 21.12C144.033 21.12 142.893 21.98 142.473 22.94H142.433V21.4H140.153V31ZM152.094 23.32V27.8C152.094 29.64 152.674 31.2 155.214 31.2C155.754 31.2 156.394 31.1 156.814 30.94L156.734 29.06C156.454 29.2 156.034 29.26 155.714 29.26C154.654 29.26 154.454 28.64 154.454 27.78V23.32H156.854V21.4H154.454V18.62H152.094V21.4H150.414V23.32H152.094ZM167.35 21.4H164.95V26.68C164.95 27.96 164.23 29.28 162.71 29.28C161.17 29.28 160.91 27.86 160.91 26.72V21.4H158.51V27.4C158.51 29.36 159.55 31.28 162.05 31.28C163.47 31.28 164.61 30.42 165.03 29.46H165.07V31H167.35V21.4ZM170.271 31H172.671V21.4H170.271V31ZM169.931 18.14C169.931 18.9 170.571 19.58 171.451 19.58C172.331 19.58 173.011 18.96 173.011 18.14C173.011 17.32 172.331 16.7 171.451 16.7C170.571 16.7 169.931 17.38 169.931 18.14ZM175.883 23.32V27.8C175.883 29.64 176.463 31.2 179.003 31.2C179.543 31.2 180.183 31.1 180.603 30.94L180.523 29.06C180.243 29.2 179.823 29.26 179.503 29.26C178.443 29.26 178.243 28.64 178.243 27.78V23.32H180.643V21.4H178.243V18.62H175.883V21.4H174.203V23.32H175.883Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </DialogPanel>
+          </div>
+        </div>
+      </Dialog>
     </>
   );
 }

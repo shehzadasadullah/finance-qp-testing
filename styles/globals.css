@@ -729,6 +729,42 @@ html {
   background: #F9FAFB;
 }
 
+.tab-wrapper-seller-buyer {
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.60);
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.tab-wrapper-seller-buyer-active {
+  padding: 4px 2px;
+  border-radius: 6px;
+  background: #FF007A;
+  filter: drop-shadow(0px 0px 4px #FF007A);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  width: 100pt;
+}
+
+.tab-wrapper-seller-buyer-non-active {
+  padding: 4px 2px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.10);
+  color: #FFF;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.084px;
+  width: 100pt;
+}
+
 .tab-active {
   padding: 0px 4px 12px 4px;
   border-radius: 0px;
@@ -1553,4 +1589,44 @@ html {
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+}
+
+/* MODAL CSS */
+
+.modal-custom-css {
+  filter: drop-shadow(0px 0px 4px #FFF);
+}
+
+.c-modal-heading {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.c-modal-benefits {
+  color: #101828;
+  font-family: "Plus Jakarta Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+
+.c-modal-features-wrapper {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #EAECF0;
+  background: #FFF;
+  color: #525866;
+  font-family: "Plus Jakarta Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.084px;
 }
