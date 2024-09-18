@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import img1 from "@/public/images/cu-live-chat.png";
-import ContactUs from "@/components/contact-us/ContactUs";
-import Footer from "@/components/footer/Footer";
-import Navbar from "../Navbar/Navbar";
+import ContactUs from "@/components/common/ContactUs";
+import Navbar from "../common/Navbar";
 import { useRouter } from "next/router";
+import Footer from "../common/Footer";
 
 const FaqItem = ({ question, answer, isActive, onToggle }) => (
   <div

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Footer from "@/components/footer/Footer";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../common/Navbar";
 import bikeImage from "@/public/images/ps-img-bike.png";
 import content from "@/public/images/ps-tm-content.png";
 import { useMediaQuery } from "react-responsive";
@@ -12,6 +11,7 @@ import mouse1 from "@/public/images/mouse3.png";
 import heroImage from "@/public/images/si-hero-bg.png";
 import mouse2 from "@/public/images/ps-mouse-2.png";
 import Rating from "@mui/material/Rating";
+import Footer from "../common/Footer";
 
 function Solar() {
   const isXLarge = useMediaQuery({ query: "(min-width: 1280px)" });
@@ -107,15 +107,15 @@ function Solar() {
   const canNext = currentIndex < totalSlides;
 
   const nextSlide = () => {
-    if (canNext) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex >= totalSlides ? 0 : prevIndex + 1
+    );
   };
 
   const prevSlide = () => {
-    if (canPrev) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex <= 0 ? totalSlides : prevIndex - 1
+    );
   };
 
   const tabs = [
@@ -308,7 +308,7 @@ function Solar() {
                 </div>
                 <div className="flex justify-center gap-3 items-center flex-row">
                   <button
-                    disabled={canPrev === false}
+                    // disabled={canPrev === false}
                     onClick={prevSlide}
                     className="ps-li-slider-buttons flex justify-center items-center"
                   >
@@ -330,7 +330,7 @@ function Solar() {
                   </button>
 
                   <button
-                    disabled={canNext === false}
+                    // disabled={canNext === false}
                     onClick={nextSlide}
                     className="ps-li-slider-buttons flex justify-center items-center"
                   >
