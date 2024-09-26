@@ -17,27 +17,6 @@ Builder.registerComponent(
 );
 
 Builder.registerComponent(
-  dynamic(() => import("./components/Industry-Pages/PowerSports")),
-  {
-    name: "PowerSports",
-  }
-);
-
-Builder.registerComponent(
-  dynamic(() => import("./components/Industry-Pages/Solar")),
-  {
-    name: "Solar",
-  }
-);
-
-Builder.registerComponent(
-  dynamic(() => import("./components/FAQs/FAQs")),
-  {
-    name: "FAQs",
-  }
-);
-
-Builder.registerComponent(
   dynamic(() => import("./components/HomePage-Components/HomePage-ContactUs")),
   {
     name: "HomePageContactUs",
@@ -197,5 +176,84 @@ Builder.registerComponent(
   dynamic(() => import("./components/AboutUs-Components/AboutUs-Slider")),
   {
     name: "AboutUsSlider",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/PowerSports-Components/PS-HeroSection")),
+  {
+    name: "PSHeroSection",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() =>
+    import("./components/PowerSports-Components/PS-OverComing-Section")
+  ),
+  {
+    name: "PSOverComingSection",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/PowerSports-Components/PS-Testimonials")),
+  {
+    name: "PSTestimonials",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/PowerSports-Components/PS-WhyChooseUs")),
+  {
+    name: "PSWhyChooseUs",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Solar-Components/Solar-GetStarted")),
+  {
+    name: "SolarGetStarted",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Solar-Components/Solar-HeroSection")),
+  {
+    name: "SolarHeroSection",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Solar-Components/Solar-Testimonials")),
+  {
+    name: "SolarTestimonials",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/Solar-Components/Solar-WhyChooseUs")),
+  {
+    name: "SolarWhyChooseUs",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/FAQs-Components/FAQs-GetSarted")),
+  {
+    name: "FAQsGetStarted",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/FAQs-Components/FAQs-HeroSection")),
+  {
+    name: "FAQsHeroSection",
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/FAQs-Components/FAQs-Questions")),
+  {
+    name: "FAQsQuestions",
   }
 );
